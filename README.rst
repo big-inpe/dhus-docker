@@ -67,7 +67,7 @@ DHuS up and running
 **4.** Create a configuration file named ``default.conf`` in the ``niginx/config`` directory. There is a template file name ``default.conf-template`` in ``niginx/config`` directory that you can base yours.
 
 
-**5** Create a directory named ``software`` under ``dhus``. The ``Dockerfile`` under ``dhus`` will reference the three downloaded files: ``dhus-software-2.0.0-1-osf-distribution.zip``, ``jdk-8u202-linux-x64.rpm`` and ``postgresql-9.4.1212.jar`` in that folder (``dhus/software``).
+**5.** Create a directory named ``software`` under ``dhus``. The ``Dockerfile`` under ``dhus`` will reference the three downloaded files: ``dhus-software-2.0.0-1-osf-distribution.zip``, ``jdk-8u202-linux-x64.rpm`` and ``postgresql-9.4.1212.jar`` in that folder (``dhus/software``).
 
 
 **6.** In the ``dhus/config`` directory there are two configuration files for DHuS: ``dhus-internal-db.xml`` and ``dhus-pg.xml``. If you want to store records in an internal Java database, you can copy the ``dhus-internal-db.xml`` to a new file named ``dhus.xml``. If you want to use PostgreSQL to record the metadata, please, copy the ``dhus-pg.xml`` to ``dhus.xml``.
