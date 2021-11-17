@@ -80,15 +80,15 @@ DHuS up and running
 - If you are goingto synchronize data, the ``system:executor`` entry should be enabled: ``<system:executor enabled="true" batchModeEnabled="false" />``.
 
 
-**8.** Create and start the containers with Docker Compose::
+**8.** Create and start the containers with Docker Compose:
 
 
-**8.1. ** If you have selected the PostgreSQL option, use a command such as::
+**8.1.** If you have selected the PostgreSQL option, use a command such as::
 
     docker-compose --env-file .env-dhus up --detach
 
 
-**8.1. ** If you have selected the internal Java database option, use a command such as::
+**8.2.** If you have selected the internal Java database option, use a command such as::
 
     docker-compose -f docker-compose-internal-db.yml --env-file .env-dhus up -d
 
