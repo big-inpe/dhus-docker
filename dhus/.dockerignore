@@ -1,0 +1,16 @@
+#
+# This file is part of Docker scripts for the Data Hub System.
+# Copyright (C) 2021 INPE.
+#
+# Docker scripts for the Data Hub System is free software; you can redistribute it and/or modify it
+# under the terms of the MIT License; see LICENSE file for more details.
+#
+
+# Do not include configuration files in docker build tree
+./config
+
+# Do not include the binaries in docker build tree
+dhus-software-2.0.0-1-osf-distribution.zip
+jdk-8u202-linux-x64.rpm
+postgresql-9.4.1212.jar
+
