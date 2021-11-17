@@ -67,7 +67,7 @@ DHuS up and running
 **4.** Create a configuration file named ``default.conf`` in the ``niginx/config`` directory. There is a template file name ``default.conf-template`` in ``niginx/config`` directory that you can base yours.
 
 
-**5** Create a directory named ``software`` under ``dhus``. The ``Dockerfile`` under ``dhus`` will reference the three downloaded files: ``dhus-software-2.0.0-1-osf-distribution.zip``, ``jdk-8u202-linux-x64.rpm`` and ``postgresql-9.4.1212.jar`` in that folder (``dhus/software``).
+**5.** Create a directory named ``software`` under ``dhus``. The ``Dockerfile`` under ``dhus`` will reference the three downloaded files: ``dhus-software-2.0.0-1-osf-distribution.zip``, ``jdk-8u202-linux-x64.rpm`` and ``postgresql-9.4.1212.jar`` in that folder (``dhus/software``).
 
 
 **6.** In the ``dhus/config`` directory there are two configuration files for DHuS: ``dhus-internal-db.xml`` and ``dhus-pg.xml``. If you want to store records in an internal Java database, you can copy the ``dhus-internal-db.xml`` to a new file named ``dhus.xml``. If you want to use PostgreSQL to record the metadata, please, copy the ``dhus-pg.xml`` to ``dhus.xml``.
@@ -80,15 +80,15 @@ DHuS up and running
 - If you are goingto synchronize data, the ``system:executor`` entry should be enabled: ``<system:executor enabled="true" batchModeEnabled="false" />``.
 
 
-**8.** Create and start the containers with Docker Compose::
+**8.** Create and start the containers with Docker Compose:
 
 
-**8.1. ** If you have selected the PostgreSQL option, use a command such as::
+**8.1.** If you have selected the PostgreSQL option, use a command such as::
 
     docker-compose --env-file .env-dhus up --detach
 
 
-**8.1. ** If you have selected the internal Java database option, use a command such as::
+**8.2.** If you have selected the internal Java database option, use a command such as::
 
     docker-compose -f docker-compose-internal-db.yml --env-file .env-dhus up -d
 
