@@ -15,17 +15,17 @@ services:
             context: ./dhus/
             args:
                 BASE_IMAGE: centos:7.8.2003
-        image: inpe/dhus:2.0.0-1
+        image: inpe/dhus:2.7.8-osf
         container_name: dhus
         hostname: dhus
         restart: "unless-stopped"
         env_file: .env-dhus
         volumes:
-            - "${DHUS_DATA_DIR}:/opt/dhus/2.0.0-1-osf/data"
-            - "${DHUS_LOG_DIR}:/opt/dhus/2.0.0-1-osf/log"
-            - "${DHUS_CONFIG_DIR}/dhus.xml:/opt/dhus/2.0.0-1-osf/etc/dhus.xml:rw"
-            - "${DHUS_CONFIG_DIR}/log4j2.xml:/opt/dhus/2.0.0-1-osf/etc/log4j2.xml"
-            - "${DHUS_CONFIG_DIR}/start.sh:/opt/dhus/2.0.0-1-osf/start.sh"
+            - "${DHUS_DATA_DIR}:/opt/dhus/2.7.8-osf/data"
+            - "${DHUS_LOG_DIR}:/opt/dhus/2.7.8-osf/log"
+            - "${DHUS_CONFIG_DIR}/dhus.xml:/opt/dhus/2.7.8-osf/etc/dhus.xml:rw"
+            - "${DHUS_CONFIG_DIR}/log4j2.xml:/opt/dhus/2.7.8-osf/etc/log4j2.xml"
+            - "${DHUS_CONFIG_DIR}/start.sh:/opt/dhus/2.7.8-osf/start.sh"
         networks:
             - dhus_net
 

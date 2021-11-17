@@ -37,7 +37,7 @@ RUN rpm -ivh /tmp/jdk-8u202-linux-x64.rpm && \
 # Set environment variables
 #
 ENV JAVA_HOME=/usr/java/jdk1.8.0_202-amd64
-ENV DHUS_DIR=/opt/dhus/2.0.0-1-osf
+ENV DHUS_DIR=/opt/dhus/2.7.8-osf
 
 
 #
@@ -73,13 +73,13 @@ USER ${DHUS_USER_NAME}
 #
 # Include DHuS distribution in the image layer and unzip it in DHUS_DIR 
 #
-ADD software/dhus-software-2.0.0-1-osf-distribution.zip /tmp/
+ADD software/dhus-software-2.7.8-osf-distribution.zip /tmp/
 
-RUN unzip /tmp/dhus-software-2.0.0-1-osf-distribution.zip -d ${DHUS_DIR}
+RUN unzip /tmp/dhus-software-2.7.8-osf-distribution.zip -d ${DHUS_DIR}
 
 USER root
 
-RUN rm -f /tmp/dhus-software-2.0.0-1-osf-distribution.zip
+RUN rm -f /tmp/dhus-software-2.7.8-osf-distribution.zip
 
 
 #

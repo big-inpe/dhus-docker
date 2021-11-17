@@ -148,5 +148,6 @@ config-dhus/dhus.xml
 config-dhus/log4j2.xml
 config-dhus/start.sh
 dhus-software-2.0.0-1-osf-distribution.zip
+dhus-software-2.7.8-osf-distribution.zip
 jdk-8u202-linux-x64.rpm
 postgresql-9.4.1212.jar
