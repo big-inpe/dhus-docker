@@ -156,7 +156,7 @@ java -server -Xss4m -Xms12g -Xmx12g \
      -Dcom.sun.media.jai.disableMediaLib=true              \
      -Dsun.zip.disableMemoryMapping=true                   \
      -Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager  \
-     -cp "etc:lib/postgresql-9.4.1212.jar:lib/*" fr.gael.dhus.DHuS &
+     -cp "etc:lib/*" fr.gael.dhus.DHuS &
 
 PID=$!
 echo $PID > dhus.pid

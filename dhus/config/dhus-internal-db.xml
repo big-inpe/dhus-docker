@@ -1,5 +1,5 @@
 <!DOCTYPE configuration [
-  <!ENTITY varFolder "/opt/dhus/2.0.0-1-osf/data">
+  <!ENTITY varFolder "/opt/dhus/2.0.0-osf/data">
 ]>
 <!--
   DHuS configuration
