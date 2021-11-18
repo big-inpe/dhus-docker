@@ -17,8 +17,8 @@
 				<ThresholdFilter level="WARN"/>
 			</Filters>
 		</Console>
-		<RollingFile name="RollingFile" fileName="dhus.log"
-			filePattern="dhus-%d{yyyy-MM-dd-HH}.log">
+		<RollingFile name="RollingFile" fileName="log/dhus.log"
+			filePattern="log/dhus-%d{yyyy-MM-dd-HH}.log">
 			<PatternLayout>
 				<Pattern>${pattern}</Pattern>
 			</PatternLayout>
