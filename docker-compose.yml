@@ -16,8 +16,8 @@ services:
         hostname: dhus-db
         restart: "unless-stopped"
         volumes:
-            - "${DHUS_PGDATA_DIR}:/var/lib/postgresql/data"
-            - "${PG_CONFIG_DIR}/create-db.sql:/docker-entrypoint-initdb.d/create-db.sql"
+            - "${PG_DATA_DIR}:/var/lib/postgresql/data"
+            - "./pg/config/create-db.sql:/docker-entrypoint-initdb.d/create-db.sql"
         environment:
             - "POSTGRES_PASSWORD=secret"
         networks:
@@ -54,7 +54,7 @@ services:
             - "./nginx/conf/default.conf:/etc/nginx/conf.d/default.conf:ro"
             - "./nginx/conf/nginx.conf:/etc/nginx/nginx.conf:ro"
             - "./nginx/ssl:/certs:ro"
-            - "${DHUS_NGINX_LOG_DIR}:/var/log/nginx-fs"
+            - "${NGINX_LOG_DIR}:/var/log/nginx-fs"
         networks:
             - dhus_net
         ports:
